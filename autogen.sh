@@ -31,15 +31,15 @@ fi
 # directory is set up as an SVN external.
 if test ! -e gmock; then
   echo "Google Mock not present.  Fetching gmock-1.7.0 from the web..."
-  curl $curlopts -L -O https://github.com/Anas-liu/release/archive/1.7.0.zip
-  unzip -q release-1.7.0.zip
-  rm release-1.7.0.zip
-  mv googlemock-release-1.7.0 gmock
+  curl $curlopts  -L -o gmock-1.7.0.zip https://github.com/peter-wangxu/gmock/archive/1.7.0.zip
+  unzip -q gmock-1.7.0.zip
+  rm gmock-1.7.0.zip
+  mv gmock-1.7.0 gmock
 
-  curl $curlopts -L -O https://github.com/Anas-liu/release/archive/1.7.0.zip
-  unzip -q release-1.7.0.zip
-  rm release-1.7.0.zip
-  mv googletest-release-1.7.0 gmock/gtest
+  curl $curlopts  -L -o gmock-1.7.0.zip https://github.com/peter-wangxu/gmock/archive/1.7.0.zip
+  unzip -q gmock-1.7.0.zip
+  rm gmock-1.7.0.zip
+  mv gmock-1.7.0 gmock/gtest
 fi
 
 set -ex
